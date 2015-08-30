@@ -5,7 +5,7 @@
 
 var $ = require('jquery');
 
-/*$.ajax({
+$.ajax({
     url: '/api/users'
 })
     .done(function(data){
@@ -24,5 +24,4 @@ $.ajax({
             $('body').append(val.title + '<br/>' + val.content + '<br/><br/>');
         })
     });
-*/
 $('body').css({'margin-top': '-1000px'}).animate({'margin-top': '0px'});
