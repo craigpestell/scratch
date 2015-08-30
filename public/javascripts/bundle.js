@@ -7,7 +7,7 @@
 
 var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
 
-/*$.ajax({
+$.ajax({
     url: '/api/users'
 })
     .done(function(data){
@@ -26,7 +26,6 @@ $.ajax({
             $('body').append(val.title + '<br/>' + val.content + '<br/><br/>');
         })
     });
-*/
 $('body').css({'margin-top': '-1000px'}).animate({'margin-top': '0px'});
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
