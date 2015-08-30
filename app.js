@@ -32,9 +32,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
+var proxyTarget = process.env.API_URL || 'http://localhost';
+proxyTarget += ':' + process.env.API_PORT || '3001';
+
 app.get('/api/*', function(req, res) {
     proxy.web(req, res, {
-        target: 'http://localhost:3001'
+        target: proxyTarget
     }, function(e){
         console.log('PROXY ERROR:');
         console.log(e);
